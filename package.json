@@ -6,10 +6,17 @@
   "scripts": {
     "dev": "electron-vite dev",
     "build": "electron-vite build",
+    "build-win": "electron-builder --windows --portable",
     "preview": "electron-vite preview",
     "postinstall": "electron-rebuild",
     "pack": "electron-vite build && electron-builder --dir",
     "dist": "electron-vite build && electron-builder"
+  },
+  "build": {
+    "win": {
+      "target": "portable",
+      "artifactName": "TimeAttackCounter-${version}.${ext}"
+    }
   },
   "dependencies": {
     "electron-store": "^8.1.0",
