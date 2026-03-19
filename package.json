@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "electron-vite dev",
     "build": "electron-vite build",
-    "build-win": "electron-builder --windows --portable",
+    "build-win": "electron-vite build && electron-builder -w portable",
     "preview": "electron-vite preview",
     "postinstall": "electron-rebuild",
     "pack": "electron-vite build && electron-builder --dir",
